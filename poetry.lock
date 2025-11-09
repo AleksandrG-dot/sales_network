@@ -111,6 +111,25 @@ argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
+name = "django-countries"
+version = "8.0.0"
+description = "Provides a country field for Django models."
+optional = false
+python-versions = ">=3.8"
+groups = ["main"]
+files = [
+    {file = "django_countries-8.0.0-py3-none-any.whl", hash = "sha256:21e94bfee755eaeb052c2ae655fb64ea94546dac42fab015cfba6eb1490fd215"},
+    {file = "django_countries-8.0.0.tar.gz", hash = "sha256:c4e3bd0b3c2faa4213abaefb7330e8f8d276f0a5c3d91c5011bd5dc156c4eb00"},
+]
+
+[package.dependencies]
+asgiref = "*"
+typing-extensions = "*"
+
+[package.extras]
+pyuca = ["pyuca"]
+
+[[package]]
 name = "djangorestframework"
 version = "3.16.1"
 description = "Web APIs for Django, made easy."
@@ -480,6 +499,18 @@ dev = ["build", "hatch"]
 doc = ["sphinx"]
 
 [[package]]
+name = "typing-extensions"
+version = "4.15.0"
+description = "Backported and Experimental Type Hints for Python 3.9+"
+optional = false
+python-versions = ">=3.9"
+groups = ["main"]
+files = [
+    {file = "typing_extensions-4.15.0-py3-none-any.whl", hash = "sha256:f0fa19c6845758ab08074a0cfa8b7aecb71c999ca73d62883bc25cc018c4e548"},
+    {file = "typing_extensions-4.15.0.tar.gz", hash = "sha256:0cea48d173cc12fa28ecabc3b837ea3cf6f38c6d1136f85cbaaf598984861466"},
+]
+
+[[package]]
 name = "tzdata"
 version = "2025.2"
 description = "Provider of IANA time zone data"
@@ -495,4 +526,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.13"
-content-hash = "f900eea2cf2ce0edc1120bbbb47af907295e168704def4dd7a69392aff942b00"
+content-hash = "3475a8d4f14d566016896ac78bab25282f7c45a389539ab01c6b961c2aa53b2f"

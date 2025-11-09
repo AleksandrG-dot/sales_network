@@ -133,4 +133,13 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-AUTH_USER_MODEL = 'users.User'
+# AUTH_USER_MODEL = 'users.User'
+
+COUNTRIES_FIRST = ['RU', 'CN']
+
+# Типы звеньев торговой сети
+NODE_TYPES = [
+    ('factory', 'Завод'),
+    ('retail', 'Розничная сеть'),
+    ('entrepreneur', 'Индивидуальный предприниматель'),
+]
