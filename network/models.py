@@ -85,11 +85,11 @@ class NetworkNode(models.Model):
         if self.supplier is None:  # Если не указан поставщик, то считаю что это завод (с уровнем 0)
             self.level = 0
         else:
-            self.level = self.supplier.level + 1
+            self.level = self.supplier.level + 1  # noqa
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f"{self.get_type_display()}: {self.name} (Уровень {self.level})"
+        return f"{self.get_type_display()}: {self.name} (Уровень {self.level})"  # noqa
 
     class Meta:
         verbose_name = "Звено сети"
