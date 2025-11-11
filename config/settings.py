@@ -141,5 +141,5 @@ COUNTRIES_FIRST = ['RU', 'CN']
 NODE_TYPES = [
     ('factory', 'Завод'),
     ('retail', 'Розничная сеть'),
-    ('entrepreneur', 'Индивидуальный предприниматель'),
+    ('entrepreneur', 'ИП'),  # Индивидуальный предприниматель
 ]
