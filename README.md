@@ -2,3 +2,8 @@
 API-cервис сети по продаже электроники. Позволяет <...>
 Для работы с сервисом требуется авторизация пользователя. 
 Создано на Django REST Framework и БД PostgreSQL.
+
+### Создание суперпользователя
+`python manage.py createadmin` - создание суперпользователя (username, email, password из .env)
+
+
