@@ -1,0 +1,150 @@
+[
+  {
+    "model": "network.product",
+    "pk": 1,
+    "fields": {
+      "name": "Смартфон Xi 6R ProGal",
+      "model": "XC1881",
+      "release_date": "2025-01-10"
+    }
+  },
+  {
+    "model": "network.product",
+    "pk": 2,
+    "fields": {
+      "name": "Планшет Xo iPlay 10",
+      "model": "O2575",
+      "release_date": "2025-01-11"
+    }
+  },
+  {
+    "model": "network.contact",
+    "pk": 1,
+    "fields": {
+      "email": "zavod_1@esn.ru",
+      "country": "CN",
+      "city": "Beijing",
+      "street": "33 Xi'erqi Middle Road",
+      "house": "Building 6"
+    }
+  },
+  {
+    "model": "network.contact",
+    "pk": 2,
+    "fields": {
+      "email": "zavod_2@esn.ru",
+      "country": "CN",
+      "city": "Пекин",
+      "street": "33 Xi'erqi Middle Road, район Haidian",
+      "house": "6, этаж 9"
+    }
+  },
+  {
+    "model": "network.contact",
+    "pk": 3,
+    "fields": {
+      "email": "retail_1@esn.ru",
+      "country": "RU",
+      "city": "Екатеринбург",
+      "street": "Малышева",
+      "house": "51"
+    }
+  },
+  {
+    "model": "network.contact",
+    "pk": 4,
+    "fields": {
+      "email": "retail_2@esn.ru",
+      "country": "RU",
+      "city": "Москва",
+      "street": "ш. Энтузиастов",
+      "house": "12"
+    }
+  },
+  {
+    "model": "network.contact",
+    "pk": 5,
+    "fields": {
+      "email": "ip_1@esn.ru",
+      "country": "RU",
+      "city": "Екатеринбург",
+      "street": "Малышева",
+      "house": "51"
+    }
+  },
+  {
+    "model": "network.networknode",
+    "pk": 1,
+    "fields": {
+      "name": "Naiani",
+      "type": "factory",
+      "supplier": null,
+      "level": 0,
+      "debt": "0.00",
+      "created_at": "2025-11-10T18:11:09.685Z",
+      "contacts": [
+        2,
+        1
+      ],
+      "products": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "network.networknode",
+    "pk": 2,
+    "fields": {
+      "name": "Naiani Russia",
+      "type": "retail",
+      "supplier": 1,
+      "level": 1,
+      "debt": "100000.00",
+      "created_at": "2025-11-10T18:17:11.202Z",
+      "contacts": [
+        3
+      ],
+      "products": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "network.networknode",
+    "pk": 3,
+    "fields": {
+      "name": "Naiani Russia Moscow",
+      "type": "retail",
+      "supplier": 1,
+      "level": 1,
+      "debt": "500000.00",
+      "created_at": "2025-11-10T18:23:35.767Z",
+      "contacts": [
+        4
+      ],
+      "products": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "network.networknode",
+    "pk": 4,
+    "fields": {
+      "name": "SMART MOBILE",
+      "type": "entrepreneur",
+      "supplier": 2,
+      "level": 2,
+      "debt": "20000.00",
+      "created_at": "2025-11-10T18:26:38.967Z",
+      "contacts": [
+        5
+      ],
+      "products": [
+        1
+      ]
+    }
+  }
+]

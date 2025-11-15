@@ -17,7 +17,7 @@ class CityFilter(admin.SimpleListFilter):
 
     def queryset(self, request, queryset):
         if self.value():
-            return queryset.filter(contact__city=self.value())
+            return queryset.filter(contacts__city=self.value())
         return queryset
 
 
@@ -50,7 +50,7 @@ class NetworkNodeAdmin(admin.ModelAdmin):
     readonly_fields = ("created_at", "level")
     list_filter = (CityFilter, "type", "created_at")
     actions = ("clear_debt",)
-    search_fields = ("name", "contact__email")
+    search_fields = ("name", "contacts__email")
 
     @admin.action(description="Кол-во прод.")
     def count_products(self, obj):
@@ -59,7 +59,7 @@ class NetworkNodeAdmin(admin.ModelAdmin):
 
     @admin.action(description="Контакты")
     def contacts_link(self, obj):
-        con_list = obj.contact.values_list("id", "email")
+        con_list = obj.contacts.values_list("id", "email")
         return format_html_join(
             "",
             "<p style='margin: 0; padding: 0;'><a href='{}'>{}</a></p>",

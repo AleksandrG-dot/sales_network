@@ -19,7 +19,7 @@ class Product(models.Model):
         return f"{self.name} ({self.model})" if self.model else self.name
 
     class Meta:
-        verbose_name = "Продукт"
+        verbose_name = "продукт"
         verbose_name_plural = "Продукты"
 
 
@@ -33,10 +33,10 @@ class Contact(models.Model):
     house = models.CharField(max_length=10, verbose_name="Номер дома", help_text="Введите номер дома")
 
     def __str__(self):
-        return f"{self.country}, {self.city}, {self.street}, {self.house}"
+        return f"{self.email} {self.country}, {self.city}, {self.street}, {self.house}"
 
     class Meta:
-        verbose_name = "Контакт"
+        verbose_name = "контакт"
         verbose_name_plural = "Контакты"
 
 
@@ -49,7 +49,7 @@ class NetworkNode(models.Model):
         max_length=15, choices=NODE_TYPES, verbose_name="Тип звена", help_text="Выберите тип звена сети"
     )
 
-    contact = models.ManyToManyField(
+    contacts = models.ManyToManyField(
         Contact, verbose_name="Контакты", help_text="Выберите контакты для этого звена сети"
     )
 
@@ -92,5 +92,5 @@ class NetworkNode(models.Model):
         return f"{self.get_type_display()}: {self.name} (Уровень {self.level})"  # noqa
 
     class Meta:
-        verbose_name = "Звено сети"
+        verbose_name = "звено сети"
         verbose_name_plural = "Звенья сети"
